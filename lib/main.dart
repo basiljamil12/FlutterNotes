@@ -45,11 +45,12 @@ class HomePage extends StatelessWidget {
             if (user != null) {
               if (user.emailVerified) {
                 return const NotesView();
+              } else {
+                return const Verify();
               }
             } else {
               return const LoginView();
             }
-            return const Text('Done');
 
           default:
             return const CircularProgressIndicator();
